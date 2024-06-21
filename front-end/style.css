@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@300;400&display=swap');
 
 :root{
-    --cor-um: #000000;
-    --cor--dois: #FFFFFF;
-    --cor--tres: #FF0000;
-    --cor--links: #9d1111;
-    --cor--hover: #270202;
-    --cor--quatro: #f26161;
+    --cor-um: #010f30;
+    --cor--dois: #ffffff;
+    --cor--tres: #e7191f;
+    --cor--links: #84011c;
+    --cor--hover: #5f071e;
 }
 
 *{
@@ -21,7 +20,7 @@
 .cabecalho__titulo{
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem;
-    background: linear-gradient(180deg, rgb(174, 64, 64), rgb(211, 3, 3));
+    background: linear-gradient(180deg, var(--cor--links), var(--cor--tres));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -43,16 +42,25 @@
 }
 
 body{
-   /* height: 100vh; */
     box-sizing: border-box;
     background-color: var(--cor-um);
     color: var(--cor--dois);
 }
 
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
 .apresentacao{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 150px;
+
 }
 
 .apresentacao__titulo{
@@ -65,7 +73,7 @@ body{
 }
 
 .titulo_destaque{
-    background: linear-gradient(180deg, rgb(174, 64, 64), rgb(211, 3, 3));
+    background: linear-gradient(180deg, var(--cor--links), var(--cor--tres));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -112,7 +120,7 @@ body{
     flex: 1;
     justify-content: center;
     transition: all 300ms ease-in-out;
-    border: 1px solid black;
+    border: 1px solid var(--cor-um);
     background-color: var(--cor--links);
     opacity: 0.8;
 }
@@ -182,7 +190,6 @@ body{
         gap: 10px;
     }
 
-
     .paginas{
         flex-direction: column;
         background-color: black;
@@ -203,4 +210,12 @@ body{
         width: 30%;
     }
    
+}
+
+@media (max-width: 400px) {
+
+    .apresentacao__titulo{
+        font-size: 3rem;
+    }
+
 }
