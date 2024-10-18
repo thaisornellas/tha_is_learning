@@ -1,5 +1,0 @@
-Relatório sobre o desafio de 7 dias de analise de dados proposto pela Alura.
-
-Nesse desafio foi possível colocar em prática meus conhecimentos prévios sobre a linguagem Python em um projeto útil e real. Além disso obtive como aprendizado manusear dados reais, criar tabelas e gráficos e analisar os mesmos com o que foi solicitado. Pude criar funções e utiliza-las em um contexto util. Pude trabalhar com a biblioteca pandas e criar familiaridade com seus comandos. 
-
-Diria que o projeto foi bem satisfatório, aprendi coisas novas e coloquei em prática tudo que pude nesse desafio. 
