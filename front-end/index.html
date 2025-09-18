@@ -8,17 +8,78 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="principal">
-    <header class="cabecalho">
-        <h1 class="cabecalho__titulo">THA IS LEARNING</h1>
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">About</a>
-            <a class="cabecalho__menu__link" href="pages.html">Pages</a>
-        </nav>
-    </header>
-    <main class="apresentacao">
-        <h1 class="apresentacao__titulo">WELCOME TO <strong class="titulo_destaque">THA IS LEARNING</strong></h1>
+    <section class="telainteira" id="home">
+        <header class="cabecalho">
+                <h1 class="cabecalho__titulo">THA IS LEARNING</h1>
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="#">Home</a>
+                <a class="cabecalho__menu__link" href="#about">About</a>
+                <a class="cabecalho__menu__link" href="#pages">Pages</a>
+                <a class="cabecalho__menu__link" href="#contato">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section class="apresentacao">
+                <h1 class="apresentacao__titulo">WELCOME TO <strong class="titulo_destaque">THA IS LEARNING</strong></h1>
+            </section>
+    </section>
+        <section class="aboutme" id="about">
+            <h1 class="aboutme_titulo">About me</h1>
+            <section class = aboutme_block1>
+                <p class="aboutme_text">My name is Thais, and I hold a <b>Master’s degree in Physics with emphasis on Cosmology</b> from the State University of Londrina (UEL). During my master’s, I worked as a <b>programmer implementing concentration–mass relation models</b> for the <b>NumCosmo library</b>, while also conducting <b>data analysis and validation of cosmological codes</b>. I was also a <b>junior collaborator in the Dark Energy Science Collaboration (DESC)</b>, contributing to validation analyses of the <b>Core Cosmology Library (CCL)</b>.  
+                <br><br>
+                I earned my <b>Bachelor’s degree in Physics</b> from the State University of Maringá (UEM) in 2023, where I carried out research in <b>photothermal techniques applied to the characterization of photosensitizing dyes for Photodynamic Therapy</b>. In parallel, I worked as a <b>Teaching Assistant</b>, creating and solving didactic material in Applied Physics, which strengthened my skills in <b>communication and organization</b>.  
+                <br><br>
+                I have strong interests in <b>computational physics, algorithm development, and statistical data analysis</b>, while also expanding my knowledge in <b>HTML, CSS, JavaScript, SQL, and object-oriented programming logic</b>. Beyond academia, I enjoy practicing and testing my skills in <b>front-end web development</b>, creating projects that also serve as a <b>portfolio to showcase my abilities</b>.  
+                <br><br>
+                I am motivated by <b>continuous learning, innovation, and generating a positive impact</b>, values that connect with my personal purpose: to contribute to <b>solutions that make a difference in people’s lives</b> and help build a <b>better future</b>.  
+                </p>
+                    <img src="assets/1.jpeg" class="aboutme_image" alt="Foto da Thais">
+            </section>
+        </section>
+        <section class="pages" id="pages">
+         <h1 class="titulo"> Where to find me </h1>
+            <section class="paginas">
+                <div class="paginas__navegacao">
+                    <a class="paginas__navegacao__link" href="https://github.com/thaisornellas"><img class="paginas__navegacao__foto" src="./assets/thaisredes.png" alt="foto de perfil da thais">Github</a>
+                </div>
+                <div class="paginas__navegacao">
+                    <a class="paginas__navegacao__link" href="https://www.linkedin.com/in/thais-ornellas-79a671280/"><img class="paginas__navegacao__foto" src="./assets/thaislinkedin.png" alt="foto de perfil da thais">LinkedIn</a>
+                </div>
+                <div class="paginas__navegacao">
+                    <a class="paginas__navegacao__link" href="http://lattes.cnpq.br/5055404121731822"><img class="paginas__navegacao__foto" src="./assets/thaisredes.png" alt="foto de perfil da thais">Lattes</a>
+                </div>
+                <div class="paginas__navegacao">
+                    <a class="paginas__navegacao__link" href="https://instagram.com/mthaisornellas"><img class="paginas__navegacao__foto" src="./assets/thaisinsta.png" alt="foto de perfil da thais">Instagram</a>
+                </div>
+                <div class="paginas__navegacao">
+                    <a class="paginas__navegacao__link" href="https://open.spotify.com/user/223a3ydob3mzxf5nx6mugomaq?si=7ead9cc9281c4e89"><img class="paginas__navegacao__foto" src="./assets/thaisspotify.png" alt="foto de perfil da thais">Spotify</a>
+                </div>
+            </section>
+        </section>
+        <section class="contato" id="contato">
+            <h1 class="contato_titulo">Get in touch</h1>
+            <div class="contatos_block">
+                <div class="contato_1">
+                    <form id="form" class="form">
+                            <input type="text" id="name" placeholder="name" class="button-form" 
+                            name="name" required>
+                            <input type="text" id="email" placeholder="email" class="button-form_e" class="button-form" 
+                            name="email" required>
+                        <textarea class="button-form_msg" name="message" rows="5" required></textarea>
+                        <button type="submit" class="send">Send</button>
+                        <p id="message_sent" class="message_sent" align="center" >Message sent!</p>
+                    </form>
+                </div>
+                <div class="contato_2">
+                    <iframe src="https://www.google.com/maps?q=-23.3268058,-51.2084341&hl=pt-br&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="footer">THA IS LEARNING</footer>
+    
 </body>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script>
 </html>

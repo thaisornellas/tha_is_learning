@@ -14,7 +14,12 @@
 }
 
 .cabecalho{
-    padding: 3% 0% 0% 3%;
+    padding: 3% 0% 0% 2%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    align-items: center;
 }
 
 .cabecalho__titulo{
@@ -25,13 +30,14 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    margin-right: auto;
 
 }
 .cabecalho__menu{
+     grid-column: 2; /* fica na coluna do meio */
+    justify-self: center;
     display: flex;
-    justify-content: center;
     gap: 20px;
-
 }
 
 .cabecalho__menu__link{
@@ -40,6 +46,9 @@
     text-decoration: none;
     color: var(--cor--dois);
 }
+.cabecalho__menu__link:hover {
+      text-decoration: underline;
+    }
 
 body{
     box-sizing: border-box;
@@ -47,15 +56,47 @@ body{
     color: var(--cor--dois);
 }
 
-.principal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.telainteira{
     height: 100vh;
 }
 
-.apresentacao{
+.aboutme{
     height: 100vh;
+    background-color: var(--cor--hover);
+}
+
+.aboutme_titulo{
+    padding: 4.5% 3% 0% 3%;
+    color: var(--cor-um);
+}
+.aboutme_block1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.aboutme_text{
+    padding: 3%;
+    text-align: justify;
+    color: var(--cor-um);
+    font-size: 1.07rem;;
+}
+
+.aboutme_image{
+    padding: 1% 5% 8%;
+    height: 450px;
+    width: 450px;
+    
+}
+
+.pages{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.apresentacao{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +105,7 @@ body{
 }
 
 .apresentacao__titulo{
+    padding: 18% 5%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -78,32 +120,117 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-.conteudo{
-    padding: 5% 15%;
-    display: flex;
-    justify-content: space-between;
-    gap: 82px;
+.button-form_msg {
+    border: 1px solid var(--cor--links);
+    width: 90%;
+    height: 20%;
+    border-radius: 4px;
+    margin-top: 5px;
+    outline: none;
 }
 
-.conteudo__texto{
+.form{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 4px;
 }
 
-.conteudo__texto__titulo{
-    font-family: "Roboto Mono", monospace;
+.send {
+    background:black;
+    color: var(--cor-um);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 50px 50px 10px 80%; 
+    cursor: pointer;
+    align-self: flex-start;
 }
 
-.conteudo__imagem{
-    width: 50%;
-    height: 50%;
+.send:hover {
+    background: #555;
+}
+
+.message_sent{
+    display: none;
+    background: #fff;
+    color: black;
+    border: none;
+    width: 100px;
+    height: 20px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin: 30px 0 10px 48.5%;
+    
+}
+
+.button-form {
+    border: 1px solid rgba(128, 128, 128, 0.563);
+    width: 90%;
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.button-form_e {
+    border: 1px solid rgba(128, 128, 128, 0.563);
+    width: 90%;
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 5px;
+    outline: none;
 }
 
 .titulo{
     text-align: center;
     font-family: "Roboto Mono", monospace;
-    padding: 3%;
+    padding: 5%;
+}
+.contato {
+    min-height: 100vh;
+    background-color: var(--cor--hover);
+}
+
+.contatos_block {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    width: 100%;
+    height: 70vh;
+}
+
+.contato_1 {
+    flex: 1;
+    width: 80%;
+    padding: 2% 2%;
+    
+}
+
+.contato_2 iframe {
+  width: 80%;
+  height: 80%;
+  border: 0;
+}
+
+.contato_2 {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    background-color: var(--cor-um);
+    text-align: center;
+    padding: 15px;
+    color: var(--cor--links);
+    font-size: 1.00rem;;
+}
+
+.contato_titulo{
+    padding: 5% 3% 2% 3%;
+    color: var(--cor-um);
 }
 
 .paginas{
@@ -112,7 +239,7 @@ body{
     padding-top: 3%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 20%;
+    padding-bottom: 5%;
 }
 
 .paginas__navegacao{
@@ -123,6 +250,11 @@ body{
     border: 1px solid var(--cor-um);
     background-color: var(--cor--links);
     opacity: 0.9;
+}
+
+.paginas_r{
+    display: flex;
+    flex-direction: column;
 }
 
 .paginas__navegacao__link{
@@ -153,15 +285,16 @@ body{
 }
 
 .paginas__navegacao:hover .paginas__navegacao__link{
-    transform: scale(0.7);
+    transform: scale(0.5);
 }
-
+/*
 @media (max-width: 700px) {
     .cabecalho{
          padding: 10%;
          display: flex;
          flex-direction: column;
          gap: 10px;
+         position: fixed;
     }
     .cabecalho__menu{
         justify-content: center;
@@ -222,3 +355,4 @@ body{
     }
 
 }
+    */
