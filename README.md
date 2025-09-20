@@ -1,4 +1,4 @@
-# THA(IS) LEARNING
+# THA-IS LEARNING
 
 Repositório de rascunhos, testes e pequenos projetos de aprendizado.  
 Aqui organizo ideias rápidas e experimentos em diferentes linguagens, sem a preocupação de manter a estrutura final.
